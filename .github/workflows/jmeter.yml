@@ -16,11 +16,11 @@ jobs:
       - name: Run JMeter Action
         uses: ./
         with:
-          testFilePath: tests/sample_test.jmx
+          test-plan-path: tests/sample_test.jmx
           outputReportsFolder: reports/
           args: "--loglevel INFO"
 
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: jmeter-test-results
           path: reports/
