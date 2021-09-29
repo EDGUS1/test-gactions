@@ -11,10 +11,10 @@ jobs:
   action_build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: JMeter Test
-        uses: QAInsights/PerfAction@v2
+        uses: QAInsights/PerfAction@v1
         with:
           test-plan-path: './tests/sample_test.jmx'
           args: ""
