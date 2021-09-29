@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run JMeter Action
-        uses: ./
+        uses: QAInsights/PerfAction@v2.0
         with:
-          test-plan-path: tests/sample_test.jmx
+          test-plan-path: "./tests/sample_test.jmx"
           outputReportsFolder: reports/
           args: "--loglevel INFO"
 
